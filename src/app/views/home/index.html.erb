@@ -1,0 +1,106 @@
+<! --  ********** HEADER SECTION ********** -->
+<div class="container">
+    <img src="/AA-Blindnight-Icon-2048.png" class="img-reponsive" width="55" height="55" margin="15">
+    <img src="/BB-Blindnight-wordmark-2048.png" class="img-reponsive" width="260" height="80" margin="10x">
+</div>
+<div id="h">
+    <div class="container">
+        <div class="row centered">
+        <h3>Algorithmic matchmaking for the modern age.</h3>
+            <h2>Go on a date tonight based on interests, not aesthetics.</h2>
+            <form>
+            <% if current_user %>
+        Signed in as <strong><%= current_user.name %></strong>!
+        <%= link_to "Sign out", sign_out_path, id: "sign_out" %>
+      <% else %>
+        <%= link_to (image_tag("/facebook-login.png")), "/auth/facebook", id: "sign_in" %>
+
+              <% end %>
+              <% if current_user %>
+              <h3>Hey <strong><%= current_user.name %></strong>!</h3>
+                      <h3>Get ready for your <strong>8pm</strong> date at: </h3><h2><%= HomeController.client.search_venues_by_tip(:ll => '42.347618,-71.100288', :radius => '8000', :query => 'good for dates').first.to_hash["name"] %>
+              </h2> 
+              <% end %>
+
+                
+            </form>
+            
+        </div>
+        <! --/row -->
+    </div>
+    <!-- /container -->
+</div>
+<! --/header-->
+<! --  ********** SECTION ********** -->
+<! --  ********** SECTION ********** -->
+<div id="w">
+    <div class="container">
+        <div class="row mt">
+            <div class="col-md-6 centered">
+                <img src="/pizza.png" class="img-responsive aligncenter" width="320" alt="" data-effect="slide-left">
+            </div>
+            <! --/col-md-6 -->
+            <div class="col-md-4">
+                <h1 data-effect="slide-right">Learn</h1>
+                <p>We learn your favorite things. Your Facebook likes and Spotify streams define your interests and preferences, painting the perfect profile..</p>
+            </div>
+            <! --/col-md-4 -->
+        </div>
+        <! --/row -->
+    </div>
+    <! --/container -->
+</div>
+<! --/G -->
+<! --  ********** SECTION ********** -->
+<! --  ********** SECTION ********** -->
+<div id="w">
+    <div class="container">
+        <div class="row mt">
+            <div class="col-md-4 col-md-offset-2">
+                <h1 data-effect="slide-left">Find</h1>
+                <p>Find you the perfect romantic match. We use tons of computational power to pair you up with the perfect match, based on mutual interests and desires.</p>
+            </div>
+            <! --/col-md-4 -->
+            <div class="col-md-6 centered">
+                <img src="/heart.png" class="img-responsive aligncenter" width="320" alt="" data-effect="slide-right">
+            </div>
+            <! --/col-md-6 -->
+        </div>
+        <! --/row -->
+    </div>
+    <! --/container -->
+</div>
+<! --/R -->
+<! --  ********** SECTION ********** -->
+<! --  ********** SECTION ********** -->
+<div id="w">
+    <div class="container">
+        <div class="row mt">
+            <div class="col-md-6 centered">
+                <img src="/people.png" class="img-responsive aligncenter" width="320" alt="" data-effect="slide-left">
+            </div>
+            <! --/col-md-6 -->
+            <div class="col-md-4">
+                <h1 data-effect="slide-right">Date</h1>
+                <p>Set you on the perfect blind date. Within the same day, you'll receive an invitation to a fantastic restaurant for a splendid blind date with your match.</p>
+            </div>
+            <! --/col-md-4 -->
+        </div>
+        <! --/row -->
+    </div>
+    <! --/container -->
+</div>
+<! --/B -->
+<! --  ********** SECTION ********** -->
+<! --  ********** FOOTER SECTION ********** -->
+<div id="f">
+    <div class="container">
+        <div class="row centered mtb">
+            <img src="/AA-Blindnight-Icon-2048.png" class="img-reponsive" width="105" height="105">
+            <h1 style="color:deeppink">Blindnite</h1>
+        </div>
+        <! --/row -->
+    </div>
+    <! --/container -->
+</div>
+<! --/F -->

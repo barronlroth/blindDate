@@ -1,1 +1,5 @@
 node_modules
+
+src/config/secrets.yml
+
+src/config/secrets.yml
