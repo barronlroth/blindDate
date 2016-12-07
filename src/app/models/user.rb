@@ -14,7 +14,7 @@ class User < ApplicationRecord
       name: auth['info']['name'],
       oauth_token: auth['credentials']['token'],
       oauth_expires_at: auth['credentials']['expires_at'],
-      likes: @graph.get_connections("me","likes"),
+      # likes: @graph.get_connections("me","likes"),
       location: auth['info']['location']
     )
   end
