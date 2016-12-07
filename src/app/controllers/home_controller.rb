@@ -1,11 +1,7 @@
-require 'foursquare2'
-
 class HomeController < ApplicationController
   before_action :set_auth
 
   def index
-
-  	"dogs"
   end
 
   def profile
@@ -29,13 +25,10 @@ class HomeController < ApplicationController
   	:client_secret => 'MZY1BIXYLSW4C1F5I4L2E2FJFB4XFWS2KJLLB53NTSVE4INP',
   	api_version: '20161205')
   end
-
-  
-
+  	
   def set_auth
-  	@auth = session[:omniauth] if session[:omniauth]
-  end
-
+    @auth = session[:omniauth] if session[:omniauth]
+end
 
   
 
