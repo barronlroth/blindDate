@@ -6,6 +6,7 @@
 <div id="h">
     <div class="container">
         <div class="row centered">
+        <h3>Algorithmic matchmaking for the modern age.</h3>
             <h2>Go on a date tonight based on interests, not aesthetics.</h2>
             <form>
             <% if current_user %>
@@ -13,11 +14,13 @@
         <%= link_to "Sign out", sign_out_path, id: "sign_out" %>
       <% else %>
         <%= link_to (image_tag("/facebook-login.png")), "/auth/facebook", id: "sign_in" %>
-        	
+
+        <h3>Get ready for your <strong>8pm</strong> date at: </h3><h2><%= HomeController.client.search_venues_by_tip(:ll => '42.347618,-71.100288', :radius => '8000', :query => 'good for dates').first.to_hash["name"] %>
+</h2>	
       <% end %>
                 
             </form>
-            <h3>Algorithmic matchmaking for the modern age.</h3>
+            
         </div>
         <! --/row -->
     </div>
