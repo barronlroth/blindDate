@@ -15,6 +15,8 @@ class HomeController < ApplicationController
   	#json @venue["groups"].first["items"]
 
   	@place = venues.to_hash["venues"][0]["name"]
+
+    puts "dogs"
   	
 
   end

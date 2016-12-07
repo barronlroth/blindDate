@@ -16,8 +16,11 @@
         <%= link_to (image_tag("/facebook-login.png")), "/auth/facebook", id: "sign_in" %>
 
               <% end %>
+              <% if current_user %>
+              <h3>Hey <strong><%= current_user.name %></strong>!</h3>
                       <h3>Get ready for your <strong>8pm</strong> date at: </h3><h2><%= HomeController.client.search_venues_by_tip(:ll => '42.347618,-71.100288', :radius => '8000', :query => 'good for dates').first.to_hash["name"] %>
               </h2> 
+              <% end %>
 
                 
             </form>
